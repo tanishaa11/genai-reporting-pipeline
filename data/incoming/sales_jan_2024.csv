@@ -1,1 +1,31 @@
-
+date,product,category,region,units_sold,revenue,returns,sales_rep
+2024-01-03,ProMax Headphones,Electronics,North,42,125580,3,Priya Sharma
+2024-01-05,EcoBottle Pro,Lifestyle,South,138,55338,8,Rahul Mehta
+2024-01-08,SmartDesk Lite,Furniture,West,19,189810,1,Ananya Singh
+2024-01-10,ProMax Headphones,Electronics,East,31,92690,2,Vikram Nair
+2024-01-12,FitBand Ultra,Electronics,North,87,260565,11,Priya Sharma
+2024-01-15,EcoBottle Pro,Lifestyle,West,204,81804,14,Ananya Singh
+2024-01-18,SmartDesk Lite,Furniture,South,11,109890,0,Rahul Mehta
+2024-01-20,FitBand Ultra,Electronics,East,63,188685,5,Vikram Nair
+2024-01-22,ProMax Headphones,Electronics,South,55,164450,4,Rahul Mehta
+2024-01-25,EcoBottle Pro,Lifestyle,North,312,125112,21,Priya Sharma
+2024-02-01,SmartDesk Lite,Furniture,East,24,239760,2,Vikram Nair
+2024-02-04,FitBand Ultra,Electronics,West,101,302495,9,Ananya Singh
+2024-02-07,ProMax Headphones,Electronics,North,68,203320,6,Priya Sharma
+2024-02-10,EcoBottle Pro,Lifestyle,South,189,75789,13,Rahul Mehta
+2024-02-13,SmartDesk Lite,Furniture,West,16,159840,1,Ananya Singh
+2024-02-16,FitBand Ultra,Electronics,East,74,221530,7,Vikram Nair
+2024-02-19,ProMax Headphones,Electronics,South,49,146510,3,Rahul Mehta
+2024-02-22,EcoBottle Pro,Lifestyle,North,267,107067,18,Priya Sharma
+2024-02-25,SmartDesk Lite,Furniture,South,9,89910,0,Rahul Mehta
+2024-02-28,FitBand Ultra,Electronics,West,118,353210,10,Ananya Singh
+2024-03-02,ProMax Headphones,Electronics,East,77,230230,5,Vikram Nair
+2024-03-05,EcoBottle Pro,Lifestyle,West,341,136761,24,Ananya Singh
+2024-03-08,SmartDesk Lite,Furniture,North,28,279720,2,Priya Sharma
+2024-03-11,FitBand Ultra,Electronics,South,93,278385,8,Rahul Mehta
+2024-03-14,ProMax Headphones,Electronics,West,61,182390,4,Ananya Singh
+2024-03-17,EcoBottle Pro,Lifestyle,East,228,91428,16,Vikram Nair
+2024-03-20,SmartDesk Lite,Furniture,South,13,129870,1,Rahul Mehta
+2024-03-23,FitBand Ultra,Electronics,North,142,425090,13,Priya Sharma
+2024-03-26,ProMax Headphones,Electronics,East,84,251160,6,Vikram Nair
+2024-03-29,EcoBottle Pro,Lifestyle,South,195,78195,14,Rahul Mehta
