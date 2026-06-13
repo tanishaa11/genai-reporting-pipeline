@@ -1,0 +1,71 @@
+{
+  "name": "Google Drive CSV → GenAI Pipeline → Email Report",
+  "description": "Watches a Google Drive folder for new CSV uploads, triggers the GenAI reporting pipeline via webhook, and emails the generated report to the ops team.",
+  "version": 2,
+  "blueprint": {
+    "flow": [
+      {
+        "id": 1,
+        "module": "google-drive:WatchFiles",
+        "version": 3,
+        "parameters": {
+          "folder": "/Sales Reports/Incoming",
+          "fileType": "text/csv",
+          "watch": "new"
+        },
+        "label": "Watch for new CSV in Google Drive"
+      },
+      {
+        "id": 2,
+        "module": "util:SetVariable2",
+        "version": 1,
+        "parameters": {
+          "name": "file_name",
+          "value": "{{1.name}}"
+        },
+        "label": "Store file name"
+      },
+      {
+        "id": 3,
+        "module": "http:ActionSendData",
+        "version": 3,
+        "parameters": {
+          "url": "http://your-server-ip:8080/run",
+          "method": "POST",
+          "headers": [
+            { "name": "Content-Type", "value": "application/json" }
+          ],
+          "body": {
+            "file_name": "{{1.name}}",
+            "file_url": "{{1.webViewLink}}",
+            "triggered_at": "{{now}}"
+          }
+        },
+        "label": "POST to pipeline runner webhook"
+      },
+      {
+        "id": 4,
+        "module": "gmail:ActionSendEmail",
+        "version": 1,
+        "parameters": {
+          "to": "ops-team@yourcompany.com",
+          "subject": "Sales Report Ready — {{1.name}}",
+          "content": "A new sales CSV was detected and processed automatically.\n\nFile: {{1.name}}\nTriggered at: {{now}}\n\nThe generated report has been saved to Google Drive → /Sales Reports/Outputs/\n\nThis email was sent automatically by the GenAI Reporting Pipeline.",
+          "contentType": "text"
+        },
+        "label": "Email report notification to team"
+      }
+    ],
+    "metadata": {
+      "instant": false,
+      "version": 1,
+      "scenario": {
+        "roundtrips": 1,
+        "maxErrors": 3,
+        "autoCommit": true,
+        "autoCommitTriggerLast": true,
+        "sequential": false
+      }
+    }
+  }
+}
