@@ -1,0 +1,2 @@
+triggered_at,file_name,status,report_path,duration_sec
+2026-06-13 06:53:08,sales_jan_2024.csv,SUCCESS,outputs/report_20260613_0653.md,0.5
