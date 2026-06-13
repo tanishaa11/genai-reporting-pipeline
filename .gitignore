@@ -1,0 +1,7 @@
+.env
+*.pyc
+__pycache__/
+outputs/report_*.md
+outputs/report_*.txt
+.DS_Store
+automation/runner.log
